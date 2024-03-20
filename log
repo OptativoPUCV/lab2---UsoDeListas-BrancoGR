@@ -106,3 +106,21 @@ exercises.c:50:15: error: expected expression before ‘,’ token
       |               ^
 Compilation failed
 8274341
+Wed 20 Mar 2024 02:09:24 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:14: error: invalid operands to binary * (have ‘int *’ and ‘List *’)
+   50 |        push(i* L);
+      |              ^
+exercises.c:50:8: error: too few arguments to function ‘push’
+   50 |        push(i* L);
+      |        ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+Compilation failed
+dc24800
