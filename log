@@ -382,3 +382,18 @@ In file included from test.c:1:
 cc1: all warnings being treated as errors
 Compilation failed
 ac3c54f
+Wed 20 Mar 2024 02:27:01 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:66:20: error: implicit declaration of function ‘get’; did you mean ‘getw’? [-Werror=implicit-function-declaration]
+   66 |     suma += *(int*)get(L, i);
+      |                    ^~~
+      |                    getw
+exercises.c:66:14: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   66 |     suma += *(int*)get(L, i);
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+aebb971
