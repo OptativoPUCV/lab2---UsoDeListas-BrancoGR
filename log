@@ -166,3 +166,9 @@ exercises.c:49:13: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 77284ab
+Wed 20 Mar 2024 02:12:09 PM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+ tests:  2|3
+total_score: 20/70
+a3fbc51
