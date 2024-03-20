@@ -442,3 +442,14 @@ exercises.c:65:15: error: invalid use of incomplete typedef ‘List’
       |               ^
 Compilation failed
 9def186
+Wed 20 Mar 2024 02:32:01 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:65:12: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   65 |       suma += first(L);
+      |            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+79fa712
