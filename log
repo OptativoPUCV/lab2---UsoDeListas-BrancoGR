@@ -55,3 +55,26 @@ exercises.c:49:13: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 aeb8a16
+Wed 20 Mar 2024 02:08:55 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:13: error: expected expression before ‘int’
+   50 |        push(int* i, L);
+      |             ^~~
+exercises.c:50:8: error: too few arguments to function ‘push’
+   50 |        push(int* i, L);
+      |        ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+In file included from test.c:5:
+exercises.c:49:13: error: unused variable ‘i’ [-Werror=unused-variable]
+   49 |        int* i = (int*)malloc(sizeof(int));
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+b5edce1
