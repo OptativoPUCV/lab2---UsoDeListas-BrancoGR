@@ -61,9 +61,9 @@ retorne la suma de sus elementos.
 int sumaLista(List *L)
 {
   int suma = 0;
-  for (int i = 0; i < get_size(L); i++)
+  for (int i = 0; i < strlen(L); i++)
   {
-    suma += *((int *)get_element_at(L, i));
+    suma += *((int *)(L, i));
   }
   return suma;
   
