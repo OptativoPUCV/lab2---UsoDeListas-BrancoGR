@@ -201,3 +201,8 @@ exercises.c:65:9: error: ‘lista’ undeclared (first use in this function)
 exercises.c:65:9: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 e60058d
+Wed 20 Mar 2024 02:21:29 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  0|0
+c2903d0

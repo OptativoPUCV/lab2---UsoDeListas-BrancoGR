@@ -62,9 +62,11 @@ int sumaLista(List *L)
 {
   int suma = 0;
   
-  while(lista != NULL)
+  while(L != NULL)
     {
       suma = suma + *(int*)first(L);
+      L = next(L);
+      
     }
   return suma;
   
