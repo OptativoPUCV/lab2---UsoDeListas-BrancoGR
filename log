@@ -130,3 +130,28 @@ Wed 20 Mar 2024 02:10:19 PM UTC:
  tests:  0|5
 total_score: 0/70
 85412e9
+Wed 20 Mar 2024 02:11:13 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:8: error: variable-sized object may not be initialized
+   49 |        int* l[i] = (int*)malloc(sizeof(int));
+      |        ^~~
+exercises.c:50:21: error: passing argument 2 of ‘pushFront’ makes pointer from integer without a cast [-Werror=int-conversion]
+   50 |        pushFront(L, i);
+      |                     ^
+      |                     |
+      |                     int
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:17:31: note: expected ‘void *’ but argument is of type ‘int’
+   17 | void pushFront(List *L, void *dato);
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:49:13: error: unused variable ‘l’ [-Werror=unused-variable]
+   49 |        int* l[i] = (int*)malloc(sizeof(int));
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+6e643a5
