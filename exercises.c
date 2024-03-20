@@ -86,6 +86,7 @@ void eliminaElementos(List*L, int elem)
     {
       if (*primero == elem)
         popCurrent(L);
+        primero = next(L);
       else
         primero = next(L);
     }
