@@ -155,3 +155,14 @@ exercises.c:49:13: error: unused variable ‘l’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6e643a5
+Wed 20 Mar 2024 02:11:35 PM UTC: 
+ exercises.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:13: error: unused variable ‘i’ [-Werror=unused-variable]
+   49 |        int* i = (int*)malloc(sizeof(int));
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+77284ab

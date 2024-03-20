@@ -46,10 +46,7 @@ List* crea_lista() {
 
    for (int i = 1; i < 11; i++)
      {
-       int* l[i] = (int*)malloc(sizeof(int));
-       pushFront(L, i);
-       
-       next(L);
+       int* i = (int*)malloc(sizeof(int));
      }
    return L;
 }
