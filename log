@@ -516,3 +516,14 @@ Wed 20 Mar 2024 02:54:42 PM UTC:
  tests:  3|2
 total_score: 40/70
 651a6ad
+Wed 20 Mar 2024 02:56:50 PM UTC: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:113:20: error: ‘aux’ undeclared (first use in this function)
+  113 |       push(P1, top(aux));
+      |                    ^~~
+exercises.c:113:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+31dfc7f
