@@ -96,3 +96,13 @@ stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
 cc1: all warnings being treated as errors
 Compilation failed
 8c5da9f
+Wed 20 Mar 2024 02:09:18 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:15: error: expected expression before ‘,’ token
+   50 |        push(i*, L);
+      |               ^
+Compilation failed
+8274341
