@@ -190,3 +190,14 @@ Wed 20 Mar 2024 02:17:33 PM UTC:
  tests:  1|4
 total_score: 10/70
 0d2ad46
+Wed 20 Mar 2024 02:20:42 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:65:9: error: ‘lista’ undeclared (first use in this function)
+   65 |   while(lista != NULL)
+      |         ^~~~~
+exercises.c:65:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e60058d
