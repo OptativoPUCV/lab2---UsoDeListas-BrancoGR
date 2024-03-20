@@ -82,13 +82,11 @@ posiciona en el elemento anterior.
 void eliminaElementos(List*L, int elem)
 {
   int *primero = first(L);
-  for (int i = 0; i < get_size(L); i++)
+  while (primero != NULL)
     {
       if (*primero == elem)
         popCurrent(L);
-        primero = next(L);
-      else
-        primero = next(L);
+      primero = next(L);
     }
 }
 
