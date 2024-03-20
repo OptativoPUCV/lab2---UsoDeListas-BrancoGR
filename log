@@ -921,3 +921,12 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 fae4ddf
+Wed 20 Mar 2024 03:15:36 PM UTC: 
+ exercises.c | 19 ++++++++-----------
+ 1 file changed, 8 insertions(+), 11 deletions(-)
+In file included from test.c:5:
+exercises.c:136:1: error: expected identifier or ‘(’ before ‘}’ token
+  136 | }
+      | ^
+Compilation failed
+81975cb
