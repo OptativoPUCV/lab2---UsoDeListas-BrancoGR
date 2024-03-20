@@ -25,3 +25,33 @@ Wed 20 Mar 2024 02:08:06 PM UTC:
  tests:  0|5
 total_score: 0/70
 2a1029d
+Wed 20 Mar 2024 02:08:50 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:13: error: expected expression before ‘int’
+   50 |        push(int* i, L)
+      |             ^~~
+exercises.c:50:8: error: too few arguments to function ‘push’
+   50 |        push(int* i, L)
+      |        ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+In file included from test.c:5:
+exercises.c:50:23: error: expected ‘;’ before ‘next’
+   50 |        push(int* i, L)
+      |                       ^
+      |                       ;
+   51 | 
+   52 |        next(L);
+      |        ~~~~            
+exercises.c:49:13: error: unused variable ‘i’ [-Werror=unused-variable]
+   49 |        int* i = (int*)malloc(sizeof(int));
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+aeb8a16
