@@ -465,3 +465,14 @@ Wed 20 Mar 2024 02:41:34 PM UTC:
  tests:  2|3
 total_score: 20/70
 d84199e
+Wed 20 Mar 2024 02:42:24 PM UTC: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:94:14: error: ‘i’ undeclared (first use in this function)
+   94 |   *primero = i;
+      |              ^
+exercises.c:94:14: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2510694

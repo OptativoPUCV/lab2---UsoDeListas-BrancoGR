@@ -88,7 +88,10 @@ void eliminaElementos(List*L, int elem)
         popCurrent(L);
       else
         primero = next(L);
+
+      
     }
+  *primero = i;
 }
 
 /*
