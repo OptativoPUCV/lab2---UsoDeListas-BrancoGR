@@ -1256,3 +1256,9 @@ test.c:272: error: control reaches end of non-void function [-Werror=return-type
 cc1: all warnings being treated as errors
 Compilation failed
 7e4d531
+Wed 20 Mar 2024 03:17:01 PM UTC: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+ tests:  4|1
+total_score: 50/70
+f2c79e0

@@ -123,6 +123,9 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena)
+{
+  return 0;
+}
 /*
   while (*cadena) {
     if (*cadena == '(' && *(cadena + 1) != ')')
