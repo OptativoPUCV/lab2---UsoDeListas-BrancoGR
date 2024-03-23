@@ -1401,3 +1401,13 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 3fec7dd
+Sat 23 Mar 2024 08:00:32 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:31: error: expected expression before ‘||’ token
+  137 |         if (cadena[i] == ')') || (cadena[i] == ']') || (cadena[i] == '}')
+      |                               ^~
+Compilation failed
+65521d1
