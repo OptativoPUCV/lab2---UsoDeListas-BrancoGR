@@ -125,7 +125,7 @@ paréntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena)
 {
   int i = 0;
-  char temp[];
+  char temp[i];
   while (cadena[i] != '\0')
     {
       if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')

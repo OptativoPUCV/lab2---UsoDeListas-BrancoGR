@@ -1336,3 +1336,21 @@ stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
 cc1: all warnings being treated as errors
 Compilation failed
 0c811b6
+Sat 23 Mar 2024 07:53:22 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:14: error: passing argument 1 of ‘push’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  133 |         push(cadena, temp);
+      |              ^~~~~~
+      |              |
+      |              char *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+24dff89
