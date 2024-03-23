@@ -1510,3 +1510,9 @@ exercises.c:128:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 25bf2fb
+Sat 23 Mar 2024 08:46:01 PM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  4|1
+total_score: 50/70
+f5da87d
