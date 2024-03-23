@@ -1437,3 +1437,20 @@ Sat 23 Mar 2024 08:01:42 PM UTC:
  1 file changed, 2 deletions(-)
  tests:  0|0
 76e66cb
+Sat 23 Mar 2024 08:06:15 PM UTC: 
+ exercises.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:21: error: comparison between pointer and integer [-Werror]
+  137 |       if (top(pAux) == ')' || top(pAux) == ']' || top(pAux) == '}'){
+      |                     ^~
+exercises.c:137:41: error: comparison between pointer and integer [-Werror]
+  137 |       if (top(pAux) == ')' || top(pAux) == ']' || top(pAux) == '}'){
+      |                                         ^~
+exercises.c:137:61: error: comparison between pointer and integer [-Werror]
+  137 |       if (top(pAux) == ')' || top(pAux) == ']' || top(pAux) == '}'){
+      |                                                             ^~
+cc1: all warnings being treated as errors
+Compilation failed
+aea9ff4
