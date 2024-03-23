@@ -1868,3 +1868,35 @@ arraylist.c:37:6: error: ‘pushFront’ defined but not used [-Werror=unused-fu
 cc1: all warnings being treated as errors
 Compilation failed
 3b6e118
+Sat 23 Mar 2024 10:48:01 PM UTC: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:26: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  134 |         push(pAux, cadena[i]);
+      |                    ~~~~~~^~~
+      |                          |
+      |                          char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:138:70: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  138 |         if (cadena[i] == ')' && top(pAux) =! '(' || cadena[i] == ']' && top(pAux) =! '[' || cadena[i] == '}' && top(pAux) =! '{')
+      |                                                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+exercises.c:138:110: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  138 |         if (cadena[i] == ')' && top(pAux) =! '(' || cadena[i] == ']' && top(pAux) =! '[' || cadena[i] == '}' && top(pAux) =! '{')
+      |                                                                                             ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+exercises.c:138:123: error: lvalue required as left operand of assignment
+  138 |         if (cadena[i] == ')' && top(pAux) =! '(' || cadena[i] == ']' && top(pAux) =! '[' || cadena[i] == '}' && top(pAux) =! '{')
+      |                                                                                                                           ^
+In file included from test.c:5:
+exercises.c:146:1: error: control reaches end of non-void function [-Werror=return-type]
+  146 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a58a30a
