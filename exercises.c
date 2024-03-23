@@ -118,24 +118,29 @@ void copia_pila(Stack* P1, Stack* P2)
 /*
 Ejercicio 5.
 La función verifica si la cadena de entrada tiene sus 
-paraéntesis balanceados. Retorna 1 si están balanceados,
+paréntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
 int parentesisBalanceados(char *cadena)
 {
+  int i = 0;
+  char temp[];
+  while (cadena[i] != '\0')
+    {
+      if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
+      {
+        push(cadena[i], temp[i]);
+        i++;
+        if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
+          return 1;
+        else
+          return 0;
+      }
+    }
   return 0;
 }
-/*
-  while (*cadena) {
-    if (*cadena == '(' && *(cadena + 1) != ')')
-      return 1;
-    cadena += 2;
-    return 0;
-    
-  }
-    return 1; 
-  }*/
+
 
 
   

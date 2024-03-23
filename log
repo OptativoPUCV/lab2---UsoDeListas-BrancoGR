@@ -1262,3 +1262,35 @@ Wed 20 Mar 2024 03:17:01 PM UTC:
  tests:  4|1
 total_score: 50/70
 f2c79e0
+Sat 23 Mar 2024 07:52:50 PM UTC: 
+ exercises.c | 23 ++++++++++++++---------
+ 1 file changed, 14 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:8: error: array size missing in ‘temp’
+  128 |   char temp[];
+      |        ^~~~
+exercises.c:133:20: error: passing argument 1 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  133 |         push(cadena[i], temp[i]);
+      |              ~~~~~~^~~
+      |                    |
+      |                    char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:133:29: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  133 |         push(cadena[i], temp[i]);
+      |                         ~~~~^~~
+      |                             |
+      |                             char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+051f74a
