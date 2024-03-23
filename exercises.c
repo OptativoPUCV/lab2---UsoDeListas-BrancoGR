@@ -124,19 +124,19 @@ paréntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena)
 {
+  Stack* pAux = create_stack();
+  
+  
   int i = 0;
-  char temp[i];
+  
   while (cadena[i] != '\0')
     {
       if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
       {
-        push(cadena, temp);
-        i++;
-        if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
-          return 1;
-        else
-          return 0;
+        push(pAux, cadena[i]);
       }
+      else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') return 0;
+
     }
   return 0;
 }

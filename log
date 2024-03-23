@@ -1354,3 +1354,21 @@ stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
 cc1: all warnings being treated as errors
 Compilation failed
 24dff89
+Sat 23 Mar 2024 07:58:16 PM UTC: 
+ exercises.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:26: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  136 |         push(pAux, cadena[i]);
+      |                    ~~~~~~^~~
+      |                          |
+      |                          char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1838b7d
