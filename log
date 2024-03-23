@@ -1411,3 +1411,19 @@ exercises.c:137:31: error: expected expression before ‘||’ token
       |                               ^~
 Compilation failed
 65521d1
+Sat 23 Mar 2024 08:01:06 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:73: error: expected ‘)’ before ‘return’
+  137 |         if (cadena[i] == ')' || (cadena[i] == ']') || (cadena[i] == '}')
+      |            ~                                                            ^
+      |                                                                         )
+  138 |           return 1;
+      |           ~~~~~~                                                         
+exercises.c:139:7: error: expected expression before ‘}’ token
+  139 |       }
+      |       ^
+Compilation failed
+c0d8271
