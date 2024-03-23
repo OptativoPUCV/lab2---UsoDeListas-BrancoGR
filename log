@@ -1454,3 +1454,48 @@ exercises.c:137:61: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 aea9ff4
+Sat 23 Mar 2024 08:19:56 PM UTC: 
+ exercises.c | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:14: error: passing argument 1 of ‘push’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  136 |         push(&pAux, &cadena[i]);
+      |              ^~~~~
+      |              |
+      |              Stack ** {aka List **}
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘Stack **’ {aka ‘List **’}
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:143:45: error: comparison between pointer and integer [-Werror]
+  143 |           if (cadena[i] == ')' && top(pAux) == '(' || cadena[i] == ']' && top(pAux) == '[' || cadena[i] ==)
+      |                                             ^~
+exercises.c:143:85: error: comparison between pointer and integer [-Werror]
+  143 |           if (cadena[i] == ')' && top(pAux) == '(' || cadena[i] == ']' && top(pAux) == '[' || cadena[i] ==)
+      |                                                                                     ^~
+exercises.c:143:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  143 |           if (cadena[i] == ')' && top(pAux) == '(' || cadena[i] == ']' && top(pAux) == '[' || cadena[i] ==)
+      |               ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:143:107: error: expected expression before ‘)’ token
+  143 |           if (cadena[i] == ')' && top(pAux) == '(' || cadena[i] == ']' && top(pAux) == '[' || cadena[i] ==)
+      |                                                                                                           ^
+exercises.c: At top level:
+exercises.c:148:3: error: expected identifier or ‘(’ before ‘if’
+  148 |   if(pAux != NULL)
+      |   ^~
+exercises.c:150:3: error: expected identifier or ‘(’ before ‘return’
+  150 |   return 1;
+      |   ^~~~~~
+exercises.c:151:1: error: expected identifier or ‘(’ before ‘}’ token
+  151 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:147:5: error: control reaches end of non-void function [-Werror=return-type]
+  147 |     }
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+bbbca61
