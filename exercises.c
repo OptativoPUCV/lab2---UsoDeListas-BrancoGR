@@ -128,21 +128,19 @@ int parentesisBalanceados(char *cadena)
   int i = 0;
 
   while(cadena[i] != '\0')
+  {
+    if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
     {
-      if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
-      {
-        push(pAux, cadena[i]);
-      }
-      else //significa que es un cierre entonces xd
-      {
-        if (cadena[i] == ')' && top(pAux) =! '(' || cadena[i] == ']' && top(pAux) =! '[' || cadena[i] == '}' && top(pAux) =! '{')
-          return 0;
+      push(pAux, cadena[i]);
+    }
+    else //significa que es un cierre entonces xd
+    {
+      if (cadena[i] == ')' && top(pAux) =! '(' || cadena[i] == ']' && top(pAux) =! '[' || cadena[i] == '}' && top(pAux) =! '{')
+        return 0;
                  
           
-      i++;
-    }
-  return 0;
+    i++;
   }
-}
+
 
   
