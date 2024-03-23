@@ -1372,3 +1372,32 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 1838b7d
+Sat 23 Mar 2024 07:58:48 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:14: error: passing argument 1 of ‘push’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  136 |         push(&pAux, cadena[i]);
+      |              ^~~~~
+      |              |
+      |              Stack ** {aka List **}
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘Stack **’ {aka ‘List **’}
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:136:27: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  136 |         push(&pAux, cadena[i]);
+      |                     ~~~~~~^~~
+      |                           |
+      |                           char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3fec7dd
