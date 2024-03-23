@@ -135,13 +135,10 @@ int parentesisBalanceados(char *cadena)
       }
       else //significa que es un cierre entonces xd
       {
-        if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
-        {
-          if (cadena[i] == top(pAux))
-            return 1;
+        if (cadena[i] == ')' && top(pAux) =! '(' || cadena[i] == ']' && top(pAux) =! '[' || cadena[i] == '}' && top(pAux) =! '{')
           return 0;
-        }
-      }
+                 
+          
       i++;
     }
   return 0;
