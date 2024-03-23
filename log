@@ -1516,3 +1516,34 @@ Sat 23 Mar 2024 08:46:01 PM UTC:
  tests:  4|1
 total_score: 50/70
 f5da87d
+Sat 23 Mar 2024 10:36:12 PM UTC: 
+ exercises.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:26: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  133 |         push(pAux, cadena[0]);
+      |                    ~~~~~~^~~
+      |                          |
+      |                          char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:139:25: error: comparison between pointer and integer [-Werror]
+  139 |           if (cadena[0] == top(pAux)
+      |                         ^~
+exercises.c:139:37: error: expected ‘)’ before ‘return’
+  139 |           if (cadena[0] == top(pAux)
+      |              ~                      ^
+      |                                     )
+  140 |             return 1;
+      |             ~~~~~~                   
+exercises.c:142:9: error: expected expression before ‘}’ token
+  142 |         }
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+8bb67a9
