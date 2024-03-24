@@ -2612,3 +2612,9 @@ arraylist.c:37:6: error: ‘pushFront’ defined but not used [-Werror=unused-fu
 cc1: all warnings being treated as errors
 Compilation failed
 5fe11d4
+Sun 24 Mar 2024 02:36:21 AM UTC: 
+ exercises.c | 29 +++++++++++++++++++++--------
+ 1 file changed, 21 insertions(+), 8 deletions(-)
+ tests:  9|0
+total_score: 70/70
+bbd85cf
